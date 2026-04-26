@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video</title>
+
+<style>
+body{
+    margin:0;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-image:url('imagenes/img2.png');
+    background-size:cover;
+    background-position:center;
+    font-family:Arial;
+}
+
+/* video */
+video{
+    width:100%;
+    max-width:400px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* botones */
+.btn{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#ff69b4;
+    color:white;
+    border:none;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+/* poema */
+#poema{
+    display:none;
+    background:rgba(255,255,255,0.9);
+    padding:15px;
+    border-radius:12px;
+    margin-top:15px;
+    text-align:center;
+}
+
+/* navegación */
+.nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<video controls>
+    <source src="imagenes/video989.mp4" type="video/mp4">
+</video>
+
+<button class="btn" onclick="mostrarPoema()">💌 Ver poema</button>
+
+<div id="poema">
+    Vivo en el limbo pensando en ti,<br>
+    en cada latido que no estás aquí.<br>
+    Y aunque la distancia quiera ganar,<br>
+    mi corazón no deja de amar ❤️
+</div>
+
+<div class="nav">
+    <a href="sa3.html" class="btn">ojitos más preciosos</a>
+    <a href="sa4.html" class="btn">solo para ti</a>
+</div>
+
+<script>
+function mostrarPoema(){
+    let p = document.getElementById("poema");
+    p.style.display = p.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
