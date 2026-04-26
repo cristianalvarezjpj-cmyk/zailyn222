@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Ti ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Corazones flotando */
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            color: rgba(255,255,255,0.6);
+            font-size: 20px;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .title {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+            animation: fadeIn 2s ease;
+        }
+
+        .photo-box {
+            position: relative;
+            width: 100%;
+            height: 520px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            animation: zoomIn 1.5s ease;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-box:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Brillo sobre la imagen */
+        .shine {
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+            transform: skewX(-25deg);
+            animation: shineMove 5s infinite;
+        }
+
+        @keyframes shineMove {
+            0% { left: -75%; }
+            100% { left: 125%; }
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.35);
+            color: white;
+            font-size: 2rem;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(3px);
+        }
+
+        .footer {
+            margin-top: 25px;
+            color: white;
+            font-size: 1.3rem;
+            opacity: 0.95;
+            animation: fadeIn 3s ease;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Corazones -->
+    <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+    <div class="heart" style="left:30%; animation-delay:2s;">💖</div>
+    <div class="heart" style="left:50%; animation-delay:1s;">💕</div>
+    <div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
+    <div class="heart" style="left:90%; animation-delay:4s;">💗</div>
+
+    <div class="container">
+
+        <div class="title">Para la mujer más especial 💖</div>
+
+        <div class="photo-box">
+            <!-- FOTO -->
+            <img src="imagenes/img5.jpeg" alt="Mi amor">
+
+            <!-- EFECTO BRILLO -->
+            <div class="shine"></div>
+
+            <!-- TEXTO -->
+            <div class="text-overlay">
+                En mis largas noches,
+lo único que me abraza
+es tu dulce presencia
+habitando en mi mente.
+
+Qué bien se siente recostarme
+y dejar que el silencio hable de ti,
+porque en cada pensamiento
+tu nombre vuelve a latir.
+
+Es imposible no hacerlo,
+si cada día que te veo
+algo mágico despierta
+en lo más profundo de mi pecho.
+
+Y así, con lo que somos,
+con lo que sentimos sin razón,
+vamos escribiendo despacio
+nuestra propia canción de amor.
+            </div>
+        </div>
+
+        <div class="footer">
+            pa usted nomas
+        </div>
+
+    </div>
+
+</body>
+</html>
